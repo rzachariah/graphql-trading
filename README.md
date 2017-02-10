@@ -12,7 +12,7 @@ npm start
 
 Navigate over to http://localhost:3000
 
-Try the hello query!
+Try the hello query! (Modified by Franck)
 
 
 
