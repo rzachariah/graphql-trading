@@ -1,0 +1,33 @@
+{
+  "name": "graphql-zero",
+  "version": "1.0.0",
+  "description": "GraphQL: Zero to One",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js --exec babel-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rzachariah/graphql-zero.git"
+  },
+  "keywords": [
+    "GraphQL"
+  ],
+  "author": "Ranjith Zachariah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rzachariah/graphql-zero/issues"
+  },
+  "homepage": "https://github.com/rzachariah/graphql-zero#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-graphql": "^0.5.4",
+    "graphql": "^0.7.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-stage-2": "^6.13.0",
+    "nodemon": "^1.10.2"
+  }
+}
