@@ -19,6 +19,7 @@ export default new GraphQLObjectType({
       resolve: () => {
           return [
               {
+                  id: 1,
                   symbol: "IBM",
                   action: "BUY",
                   amount: 100
