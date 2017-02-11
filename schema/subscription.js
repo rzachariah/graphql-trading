@@ -10,7 +10,7 @@ export default new GraphQLObjectType({
 
   fields: {
 
-    tradeChannel: {
+    tradeAdded: {
       type: Trade,
       resolve: (rootValue) => rootValue
     },

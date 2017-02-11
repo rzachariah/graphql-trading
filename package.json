@@ -23,7 +23,11 @@
     "cors": "^2.8.1",
     "express": "^4.14.0",
     "express-graphql": "^0.5.4",
-    "graphql": "^0.7.0"
+    "graphql": "^0.7.0",
+    "graphql-subscriptions": "^0.3.0",
+    "regenerator-runtime": "^0.10.1",
+    "rx": "^4.1.0",
+    "subscriptions-transport-ws": "^0.5.1"
   },
   "devDependencies": {
     "babel-cli": "^6.14.0",
