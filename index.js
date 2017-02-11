@@ -1,6 +1,6 @@
 import express from 'express';
 import graphqlHttp from 'express-graphql';
-import schema from './schema';
+import schema from './schema/root';
 const app = express();
 const port = 3000;
 
