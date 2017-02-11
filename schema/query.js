@@ -19,7 +19,18 @@ export default new GraphQLObjectType({
     trades: {
       type: new GraphQLList(Trade),
       resolve: () => {
+<<<<<<< HEAD
           return trades;
+=======
+          return [
+              {
+                  id: 1,
+                  symbol: "IBM",
+                  action: "BUY",
+                  amount: 100
+              }
+          ];
+>>>>>>> 0854a6e5857d21c84c2f83fc12fd95034e80c5d4
       }
     },
     securities: {
