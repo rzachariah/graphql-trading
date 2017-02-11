@@ -24,7 +24,7 @@ export default new GraphQLObjectType({
             resolve: (object, {trade}) => {
                 trade.id = trades.length;
                 trades.push(trade);
-                pubsub.publish(trade);
+                pubsub.publish('tradeChannel', trade);
                 return trade;
             }
         }

@@ -31,6 +31,7 @@ subscriptionManager.subscribe({
     subscription TradesSubscription {
       tradeAdded {
         symbol
+        action
         amount
       }
     }
