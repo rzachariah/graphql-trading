@@ -6,6 +6,7 @@ import {
 
 import Trade from './trade';
 import Security from './security';
+import trades from '../trades';
 
 export default new GraphQLObjectType({
   name: 'Query',
@@ -18,14 +19,7 @@ export default new GraphQLObjectType({
     trades: {
       type: new GraphQLList(Trade),
       resolve: () => {
-          return [
-              {
-                  id: 1,
-                  symbol: "IBM",
-                  action: "BUY",
-                  amount: 100
-              }
-          ];
+          return trades;
       }
     },
     securities: {
