@@ -4,6 +4,7 @@ import { SubscriptionManager, PubSub } from 'graphql-subscriptions';
 import { createServer } from 'http';
 import { SubscriptionServer } from 'subscriptions-transport-ws';
 
+import cors from "cors";
 import schema from './schema/root';
 const app = express();
 const PORT = 3000;
@@ -37,6 +38,8 @@ subscriptionManager.subscribe({
   context: {},
   callback: (err, data) => console.log(data),
 });
+
+app.use(cors());
 
 app.use(graphqlHttp({
   schema,
