@@ -5,12 +5,13 @@ import {
 } from 'graphql';
 
 import Trade from './trade';
+import Security from './security';
 
 export default new GraphQLObjectType({
   name: 'Query',
   description: 'The root query',
   fields: {
-    goodbye: {
+    hello: {
       type: GraphQLString,
       resolve: () => 'hackathon'
     },
@@ -26,6 +27,17 @@ export default new GraphQLObjectType({
               }
           ];
       }
-    }
+    },
+    securities: {
+        type: new GraphQLList(Security),
+        resolve: () => {
+          return [
+            {
+              symbol: "APPL",
+              name: "Apple Inc."
+            }
+          ];
+        }
+      }
   }
 })
