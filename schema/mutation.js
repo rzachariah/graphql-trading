@@ -21,6 +21,7 @@ export default new GraphQLObjectType({
                 }
             },
             resolve: (object, {trade}) => {
+                trade.id = trades.length;
                 trades.push(trade);
                 return trade;
             }
@@ -32,7 +33,7 @@ export const tradeInputType = new GraphQLInputObjectType({
     name: 'TradeInput',
     fields: () => ({
         symbol: { type: GraphQLString },
-        name: { type: GraphQLString },
+        action: { type: GraphQLString },
         amount: { type: GraphQLInt }
     })
 });
