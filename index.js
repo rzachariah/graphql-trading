@@ -1,14 +1,14 @@
 import express from 'express';
 import graphqlHttp from 'express-graphql';
-import { SubscriptionManager, PubSub } from 'graphql-subscriptions';
+import { SubscriptionManager } from 'graphql-subscriptions';
 import { createServer } from 'http';
 import { SubscriptionServer } from 'subscriptions-transport-ws';
 
 import cors from "cors";
+import pubsub from './pubsub';
 import schema from './schema/root';
 const app = express();
 const PORT = 3000;
-const pubsub = new PubSub();
 
 const subscriptionManager = new SubscriptionManager({
   schema,
@@ -76,7 +76,8 @@ const subscriptionServer = new SubscriptionServer(
 
 // publish to the channel 
 pubsub.publish('tradeChannel', {
-  symbol: 'FB',
+  id: -1,
+  symbol: 'ZVZTT',
   action: 'BUY',
   amount: 123,
 });

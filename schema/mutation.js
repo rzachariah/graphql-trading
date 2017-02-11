@@ -8,6 +8,7 @@ import {
 
 import Trade from './trade';
 import trades from '../trades';
+import pubsub from '../pubsub';
 
 export default new GraphQLObjectType({
     name: 'Mutation',
@@ -23,6 +24,7 @@ export default new GraphQLObjectType({
             resolve: (object, {trade}) => {
                 trade.id = trades.length;
                 trades.push(trade);
+                pubsub.publish(trade);
                 return trade;
             }
         }
