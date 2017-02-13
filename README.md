@@ -1,5 +1,5 @@
-# graphql-zero
-Up and running with GraphQL
+# graphql-trading
+Realtime trading with graphql
 
 ## Prerequisites
 - Node >=4.2.3 (Download from https://nodejs.org/en/download/)
@@ -12,7 +12,9 @@ npm start
 
 Navigate over to http://localhost:3000
 
-Try the hello query! (Modified by Franck)
+Try the trades query! Try the addTrade mutation!
+
+To subscribe to trades, get the client app from (here)[https://github.com/kjatti/graphql-trading-app]
 
 
 
